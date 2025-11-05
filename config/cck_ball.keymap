@@ -55,11 +55,11 @@
 
         QWERTY {
             bindings = <
-&kp ESC           &kp N1        &kp N2        &kp N3      &kp N4     &kp N5  &kp N6  &kp N7     &kp N8     &kp N9          &kp N0          &kp BACKSPACE
-&kp TAB           &kp Q         &kp W         &kp E       &kp R      &kp T   &kp Y   &kp U      &kp I      &kp O           &kp P           &kp BSLH
-&kp CAPSLOCK      &kp A         &lt 4 S       &kp D       &lt 3 F    &kp G   &kp H   &kp J      &kp K      &kp L           &kp SEMI        &kp SQT
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C       &kp V      &kp B   &kp N   &kp M      &kp COMMA  &kp DOT         &kp UP_ARROW    &kp FSLH
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp SPACE  &mo 1   &mo 2   &kp SPACE  &kp ENTER  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp ESC           &kp N1        &kp N2            &kp N3   &kp N4     &kp N5  &kp N6  &kp N7     &kp N8         &kp N9             &kp N0         &kp DEL
+&kp GRAVE         &kp Q         &kp W             &kp E    &kp R      &kp T   &kp Y   &kp U      &kp I          &kp O              &kp P          &kp BSLH
+&kp TAB           &kp A         &lt 4 S           &kp D    &lt 3 F    &kp G   &kp H   &kp J      &kp K          &kp L              &kp SEMI       &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X             &kp C    &kp V      &kp B   &kp N   &kp M      &kp COMMA      &kp DOT            &kp FSLH       &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp TAB  &kp SPACE  &mo 1   &mo 2   &kp ENTER  &kp BACKSPACE  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -67,11 +67,11 @@
 
         F_layers {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8  &kp F9  &kp F10  &kp F11
-&kp A    &none   &none   &none   &none   &trans  &none      &none      &none   &trans  &trans   &trans
-&trans   &none   &none   &none   &none   &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &none   &none      &none      &trans  &trans  &none    &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans   &trans
+&kp F12  &kp F1  &kp F2  &kp F3          &kp F4                &kp F5                 &kp F6        &kp F7        &kp F8        &kp F9      &kp F10       &kp F11
+&trans   &none   &none   &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7        &kp N8        &kp N9        &kp MINUS   &kp SLASH     &trans
+&trans   &none   &none   &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS    &kp ASTERISK  &trans
+&trans   &trans  &trans  &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp EQUAL     &trans
+&trans   &trans  &trans  &trans          &trans                &trans                 &mkp LCLK     &mkp RCLK     &kp N0        &trans      &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -79,11 +79,11 @@
 
         BT_layers {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &trans  &trans  &trans  &kp W
-&trans  &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans        &trans        &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
+&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans         &trans    &trans        &trans     &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &kp PAGE_UP    &trans    &kp UP_ARROW  &kp END    &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &trans         &trans    &trans        &trans     &trans  &trans
+&bt BT_CLR_ALL  &bt BT_CLR    &bt BT_NXT    &trans        &trans        &trans        &trans         &trans    &trans        &trans     &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -91,7 +91,7 @@
 
         scroll-layers {
             bindings = <
-&kp A   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -112,9 +112,10 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,
+                // 编码器1：上下滚动,,
                 <&scroll_horizontal_encoder>;
-  // 编码器2：左右滚动
+
+            // 编码器2：左右滚动
         };
     };
 };
